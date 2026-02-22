@@ -1,0 +1,26 @@
+.sticky-add-note {
+  position: fixed; // 👈 important
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #fff176;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transform: rotate(-8deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: all 0.2s ease;
+  z-index: 1000;
+
+  &:hover {
+    transform: rotate(-4deg) scale(1.1);
+  }
+
+  &.active {
+    transform: rotate(0deg) scale(1.2);
+  }
+}

@@ -1,0 +1,145 @@
+/* OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* STICKY NOTE MODAL */
+.modal {
+  position: relative;
+  width: 380px;
+  padding: 2rem 1.8rem 1.8rem;
+  background: #fff9a8; // sticky note yellow
+  border-radius: 6px;
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,0.25),
+    inset 0 -8px 20px rgba(0,0,0,0.05);
+  transform: rotate(-2deg);
+  animation: stickyPop 0.25s ease;
+}
+
+/* Tape effect on top */
+.modal::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 90px;
+  height: 30px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Pop animation */
+@keyframes stickyPop {
+  from {
+    transform: scale(0.8) rotate(-5deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(-2deg);
+    opacity: 1;
+  }
+}
+
+/* Handwritten feel */
+.modal textarea {
+  width: 100%;
+  height: 110px;
+  background: transparent;
+  border: 1px solid black;
+  resize: none;
+  font-size: 1rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  line-height: 1.4;
+  outline: none;
+}
+
+/* Title input */
+.modal input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px;
+  border: 1px solid black;
+  background: transparent;
+  font-size: 1rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  line-height: 1.4;
+  outline: none;
+}
+
+/* Checkbox section */
+.checkbox {
+  display: flex;
+  align-items: center; // 👈 vertical alignment fix
+  gap: 8px;
+  margin: 15px 0;
+  font-size: 0.95rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  appearance: none; // remove default style
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Checked state */
+.checkbox input[type="checkbox"]:checked {
+  background: #333;
+}
+
+/* Checkmark */
+.checkbox input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(230, 146, 20, 0.678);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.modal-buttons button:hover {
+  background: rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+/* Note counter */
+.note-count {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}

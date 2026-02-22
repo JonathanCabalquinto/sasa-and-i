@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freedom Wall</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Freedom Wall</h1>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- Topic Card -->
+      <!-- <section class="topic-container">
+        <div id="topic-card" class="topic-card">
+          <h2 id="topic-title">Loading topic...</h2>
+          <p>Click to share your thoughts 💬</p>
+        </div>
+      </section> -->
+
+      <!-- Wall -->
+      <!-- <section id="wall" class="wall"></section> -->
+      
+      <div class="board">
+
+        <div class="sticky-add-note" id="open-note-modal">
+          <span>+</span>
+        </div>
+        
+        <div class="note-modal hidden" id="note-modal">
+          <div class="modal-content">
+            <h3>Add Your Note</h3>
+        
+            <textarea id="note-content" placeholder="Write your thoughts..."></textarea>
+        
+            <input type="text" id="author-name" placeholder="Your name (optional)" />
+        
+            <label>
+              <input type="checkbox" id="anonymous-check" />
+              Post as Anonymous
+            </label>
+        
+            <div class="modal-actions">
+              <button id="submit-note">Post</button>
+              <button id="close-modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+s        
+
+        <div class="main-topic-card">
+          <h2 id="main-topic-title"></h2>
+        </div>
+      
+        <div id="notes-container" class="notes-container"></div>
+      
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 Freedom Wall</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+      <div class="modal">
+        <h3>Share your thoughts</h3>
+
+        <textarea
+          id="post-content"
+          placeholder="Write your sentiment here..."
+        ></textarea>
+
+        <input
+          type="text"
+          id="author-name"
+          placeholder="Your name (optional)"
+        />
+
+        <label class="checkbox">
+          <input type="checkbox" id="anonymous-checkbox" />
+          Post as Anonymous
+        </label>
+
+        <div class="modal-buttons">
+          <button id="cancel-btn" class="btn cancel">Cancel</button>
+          <button id="submit-btn" class="btn submit">Post</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

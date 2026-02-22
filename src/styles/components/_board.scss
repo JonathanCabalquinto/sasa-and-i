@@ -1,0 +1,10 @@
+.board {
+  position: relative;
+  min-height: 80vh;
+  padding: 4rem;
+  background: url('../../assets/cork-texture.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

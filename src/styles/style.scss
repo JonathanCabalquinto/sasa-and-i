@@ -1,0 +1,43 @@
+@use 'components';
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* WALL */
+.wall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 40px;
+  justify-content: center;
+  background: #c49a6c; // cork board color
+  min-height: 500px;
+  border: 20px solid #8b5e3c;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel {
+  background: #bdc3c7;
+}
+
+.submit {
+  background: #27ae60;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

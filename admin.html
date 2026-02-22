@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body class="admin-body">
+
+  <div class="admin-container">
+
+    <!-- LOGIN CARD -->
+    <div id="login-section" class="admin-card">
+      <h2>Admin Login</h2>
+
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <button id="login-btn" class="primary-btn">Login</button>
+    </div>
+
+    <!-- ADMIN DASHBOARD -->
+    <div id="admin-section" class="admin-dashboard hidden">
+
+      <div class="admin-header">
+        <h1>Freedom Wall Admin</h1>
+        <button id="logout-btn" class="danger-btn">Logout</button>
+      </div>
+
+      <div class="admin-grid">
+        <!-- CREATE TOPIC -->
+        <div class="admin-card">
+          <h3>Create New Topic</h3>
+          <input type="text" id="new-topic" placeholder="Enter topic..." />
+          <button id="create-topic" class="primary-btn">Create Topic</button>
+        </div>
+        <!-- DISPLAY TOPIC -->
+        <div class="admin-card-right">
+            <section class="admin-section">
+                <h2>Topics</h2>
+                <table class="admin-table" id="topics-table">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Created</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </div>
+      </div>
+      <section class="admin-section hidden" id="notes-section">
+            <h2><span id="selected-topic"></span></h2>
+            <table class="admin-table" id="notes-table">
+                <thead>
+                <tr>
+                    <th>Content</th>
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+      </section>
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/admin.js"></script>
+</body>
+</html>
