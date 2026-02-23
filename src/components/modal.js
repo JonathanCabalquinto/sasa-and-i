@@ -33,8 +33,8 @@ async function handleSubmit() {
   const author = document.getElementById('author-name').value
   const isAnonymous = document.getElementById('anonymous-checkbox').checked
   const imageFile = document.getElementById('post-image').files[0]
-  // const deviceId = getOrCreateDeviceId()
-  const deviceId = crypto.randomUUID()
+  const deviceId = getOrCreateDeviceId()
+  // const deviceId = crypto.randomUUID()
   const count = await countPostsByTopic(getCurrentTopicId());
 
   if (!content.trim()) {
